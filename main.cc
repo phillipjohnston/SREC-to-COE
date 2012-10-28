@@ -34,17 +34,7 @@ void writeData(char * input, fstream & file, uint8_t size);
 */
 
 int main(int argc, char * argv[])
-{
-
-#ifdef DEBUG_M
-	cout << "argc: " << argc << endl;
-	for(int i = 0; i < argc; i++)
-	{
-		cout << "argv: " << argv[i] << endl;
-	}
-	cout << endl;
-#endif
-	
+{	
 	if(argc == 2)
 	{
 		string arg_val(argv[1]);
