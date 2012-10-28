@@ -13,7 +13,7 @@
 #include <cstring>
 #include <cassert>
 
-#define DEBUG_PRINT
+#define DEBUG_M
 
 using namespace std;
 
@@ -36,7 +36,7 @@ void writeData(char * input, fstream & file, uint8_t size);
 int main(int argc, char * argv[])
 {
 
-#ifdef DEBUG_PRINT
+#ifdef DEBUG_M
 	cout << "argc: " << argc << endl;
 	for(int i = 0; i < argc; i++)
 	{
@@ -113,7 +113,7 @@ int convert(string f_in, string f_out)
 		size_t fname_size = f_in.find(".", 0);
 		f_out = f_in.substr(0, fname_size);
 		f_out.append(".coe");
-		#ifdef DEBUG_PRINT
+		#ifdef DEBUG_M
 		cout << "Calculated f_out to be " << f_out << endl;
 		#endif
 	}
@@ -173,8 +173,10 @@ void checkConvertRC(int rc)
 	if(rc != 0)
 	{
 		cout << "Conversion of file failed!" << endl;
+		#ifdef DEBUG_M
 		cout << "Tell Phillip the error code that was returned: " << rc << endl;
 		#warning "Fix this in case I ever publicly release
+		#endif
 	}
 	else
 	{
