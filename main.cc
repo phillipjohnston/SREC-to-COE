@@ -262,7 +262,7 @@ uint8_t getHeaderInfo(char * buffer, uint16_t * address, uint8_t * line_type)
 void setupCoe(fstream & file, string input)
 {
 	file << "; This program generated from " << input << endl;
-	file << "; using mtoc" << endl << endl;
+	file << "; using mtoc (by Phillip Johnston)" << endl << endl;
 	file << "memory_initialization_radix=16;" << endl;
 	file << "memory_initialization_vector=" << endl;
 	file << "00," << endl << "00," << endl << "00," << endl << "00," << endl;
