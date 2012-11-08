@@ -165,7 +165,7 @@ void checkConvertRC(int rc)
 		cout << "Conversion of file failed!" << endl;
 		#ifdef DEBUG_M
 		cout << "Tell Phillip the error code that was returned: " << rc << endl;
-		#warning "Fix this in case I ever publicly release
+		#warning "Fix this in case I ever publicly release"
 		#endif
 	}
 	else
@@ -255,7 +255,7 @@ void setupCoe(fstream & file, string input)
 	file << "; using mtoc (by Phillip Johnston)" << endl << endl;
 	file << "memory_initialization_radix=16;" << endl;
 	file << "memory_initialization_vector=" << endl;
-	file << "00," << endl << "00," << endl << "00," << endl << "00," << endl;
+	//file << "00," << endl << "00," << endl << "00," << endl << "00," << endl;
 }
 
 void writeData(char * input, fstream & file, uint8_t size)
